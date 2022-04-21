@@ -25,4 +25,14 @@ class Post(models.Model):
     def __str__(self):
         return self.titulo
 
+
 # Create your models here.
+
+
+"""
+Post.objects.bulk_create([
+    Post(titulo='Testando o shell do Django 2 com bulk',slug='testando-o-shell-do-django-22',conteudo='Testando o shell do Django',autor=user),
+    Post(titulo='Testando o shell do Django 2 com bulk 2',slug='testando-o-shell-do-django-222',conteudo='Testando o shell do Django',autor=user),
+    Post(titulo='Testando o shell do Django 2 com bulk 4',slug='testando-o-shell-do-django-2224',conteudo='Testando o shell do Django',autor=user),
+])
+"""
