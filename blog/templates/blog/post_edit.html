@@ -1,9 +1,36 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
 {% block title %} Blog - Editar Postagem {% endblock title %}
+
+{% block header %}<!-- coloquei sozinho -->
+<!-- Page Header-->
+<header class="masthead" style="background-image: url({% static 'assets/img/home-bg.jpg' %})">
+
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Editando Post</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock header %}<!-- coloquei sozinho -->
 {% block content %}
-<h1>Editar Postagem</h1>
-<form action="" method="post">{% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Editar">
-</form>
+<div class="justify-content-center">
+    <div class="card">
+        <div class="card-header">
+            <h1>Editar Postagem</h1>
+        </div>
+        <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                {{form|bootstrap}}
+                <input type="submit" value="Editar" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}
